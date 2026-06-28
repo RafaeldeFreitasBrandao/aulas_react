@@ -2,19 +2,20 @@
     <body>
         <div id="app"></div>
 
-        <script type="text/javascript">
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
-            //Seleciona um elemento, com um id específico 
+        <!-- Babel Script -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <script type="text/jsx">
+
+            //Seleciona um elemento, com um id específico//
+
             const app = document.getElementById('app');
-            //Cria um elemento 
-            const header = document.createElement('h1');
-            //Cria um novo texto node para o elemento h1
-            const text = 'Develop. Preview. Ship';
-            const headContent = document.createTextNode(text);
-            //Atribui o texto ao elemento 
-            header.appendChild(headContent);
-            //Insere o elemento novo a div
-            app.append(header);
+            const root = ReactDOM.createRoot(app);
+
+            root.render(<h1> Develop. Preview. Ship </h1>);
 
         </script>
 

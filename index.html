@@ -14,17 +14,22 @@
 
             const app = document.getElementById('app');
 
-            <!--Crie uma função que retorne um elemento -->
-
             function Header() {
                 return <h1>Develop. Preview. Ship </h1>
             }
 
+
+            //Anianhando componentes Reacts uns dentros dos outros 
+
+            function HomePage () {
+                return <div>
+                    <Header />
+                </div>
+            }
+
             const root = ReactDOM.createRoot(app);
-            
-            <!--Para renderizar passe o componente como argumento no método "root.render()"-->
-            
-            root.render(<Header />);
+
+            root.render(<HomePage />);
 
         </script>
 

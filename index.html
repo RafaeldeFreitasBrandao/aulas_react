@@ -8,14 +8,23 @@
         <!-- Babel Script -->
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
+
+        <!-- Adicionando componentes com React -->
         <script type="text/jsx">
 
-            //Seleciona um elemento, com um id específico//
-
             const app = document.getElementById('app');
-            const root = ReactDOM.createRoot(app);
 
-            root.render(<h1> Develop. Preview. Ship </h1>);
+            <!--Crie uma função que retorne um elemento -->
+
+            function Header() {
+                return <h1>Develop. Preview. Ship </h1>
+            }
+
+            const root = ReactDOM.createRoot(app);
+            
+            <!--Para renderizar passe o componente como argumento no método "root.render()"-->
+            
+            root.render(<Header />);
 
         </script>
 

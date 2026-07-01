@@ -15,16 +15,24 @@
             const app = document.getElementById('app');
 
             function Header({title}) {
-                return <h1>{`Bom dia! ${title}`}</h1>
+                return <h1>{title}</h1>
             }
 
 
-            //Anianhando componentes Reacts uns dentros dos outros 
 
             function HomePage () {
-                return <div>
-                    <Header title = "Rafael" />
+                const nomes = ['Rafael Brandão', 'Henrique Hirata', 'Luigi Bilyk']
+
+                return (
+                <div>
+                    <Header title = "CasaPágina" />
+                    <ul>
+                        {nomes.map((nome) => ( 
+                            <li key = {nome}>{nome}</li>
+                        ))}
+                    </ul>
                 </div>
+                );
             }
 
             const root = ReactDOM.createRoot(app);

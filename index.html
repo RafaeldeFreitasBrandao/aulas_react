@@ -14,8 +14,8 @@
 
             const app = document.getElementById('app');
 
-            function Header() {
-                return <h1>Develop. Preview. Ship </h1>
+            function Header({title}) {
+                return <h1>{`Bom dia! ${title}`}</h1>
             }
 
 
@@ -23,7 +23,7 @@
 
             function HomePage () {
                 return <div>
-                    <Header />
+                    <Header title = "Rafael" />
                 </div>
             }
 

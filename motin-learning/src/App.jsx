@@ -6,13 +6,14 @@ function App() {
 
   return (
     <>
-    <motion.div initial={{opacity: 0, y: 40}} 
-                animate={{opacity: 1, y: 0}}
-                transition={{duration: 0.8, ease: "easeInOut"}}
-    >
-
-      <h1>Hello World!</h1>
-    </motion.div>
+   <div className='container'>
+    <motion.button whileHover={{scale:1.05, y: -2}}
+                   whileTap={{scale:0.9, y: 1}}
+                   transition={{type:"spring", stiffness: 350, damping: 15}}
+    > 
+      Get Started
+    </motion.button>
+   </div>
     </>
   )
 }

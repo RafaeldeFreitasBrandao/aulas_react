@@ -42,16 +42,16 @@ function Home() {
 
       </form>
 {users.map (user => (
-  
-  <div>
-          <p>Nome:</p>
-          <p>Data de Nascimento: </p>
-          <p>Email: </p>
+  <div key={user.id}>
+        <div>
+          <p>Nome:{user.name}</p>
+          <p>Data de Nascimento:{user.date}</p>
+          <p>Email: {user.email}</p>
         </div>
         <button>
           <img src={Bin}/>
         </button>
-      </div>
+  </div>
 
 ))}
       <div>
